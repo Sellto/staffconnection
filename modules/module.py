@@ -5,6 +5,11 @@
 from abc import *
 import copy
 
+def clickable(fonction):
+    if page() != None:
+        return None
+    return fonction()
+
 class Module(metaclass=ABCMeta):
     '''Abstract class representing a generic module.'''
     def __init__(self, name, refreshrate=None, options=None):
@@ -35,7 +40,14 @@ class Module(metaclass=ABCMeta):
 
     @abstractmethod
     def widget(self):
-        return template('./modules/{}/widget.tpl'.format("datetime"))
+        def render():
+        '''Return a function that renders the widget view of the module
+
+        Pre: -
+        Post: The returned value contains the HTML rendering of the widget view
+              of this module or None if not supported by this module
+        '''
+        ...
 
     @abstractmethod
     def page(self):
