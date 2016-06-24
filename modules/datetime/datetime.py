@@ -9,4 +9,4 @@ from modules.module import Module
 class DateTime(Module):
     '''Class representing a module that shows current date and time.'''
     def __init__(self):
-        super().__init__('Date and Time')
+        super().__init__('datetime')
