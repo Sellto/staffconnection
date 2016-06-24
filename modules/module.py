@@ -35,13 +35,9 @@ class Module(metaclass=ABCMeta):
 
     @abstractmethod
     def widget(self):
-        '''Return a function that renders the widget view of the module
-
-        Pre: -
-        Post: The returned value contains the HTML rendering of the widget view
-              of this module or None if not supported by this module
-        '''
-        ...
+        def render():
+            return template('./modules/{}/widget.tpl'.format(self.__name))
+        return render
 
     @abstractmethod
     def page(self):
