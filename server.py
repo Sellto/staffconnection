@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+# coding: utf8
 # Author: Tom Selleslagh
 # Author: Sébastien Combéfis
 # Version: June 24, 2016
