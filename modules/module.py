@@ -35,9 +35,7 @@ class Module(metaclass=ABCMeta):
 
     @abstractmethod
     def widget(self):
-        def render():
-            return template('./modules/{}/widget.tpl'.format("datetime"))
-        return render
+        return template('./modules/{}/widget.tpl'.format("datetime"))
 
     @abstractmethod
     def page(self):
