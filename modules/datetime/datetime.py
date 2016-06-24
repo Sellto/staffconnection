@@ -18,4 +18,4 @@ class DateTime(Module):
         return render
 
     def page(self):
-        return render
+        return None
