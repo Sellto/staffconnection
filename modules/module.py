@@ -5,10 +5,7 @@
 from abc import *
 import copy
 
-def clickable(fonction):
-    if page() != None:
-        return None
-    return fonction()
+
 
 class Module(metaclass=ABCMeta):
     '''Abstract class representing a generic module.'''

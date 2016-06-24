@@ -11,7 +11,6 @@ class DateTime(Module):
     def __init__(self):
         super().__init__('Date and Time')
 
-    @clickable
     def widget(self):
         def render():
             return template('./modules/datetime/widget.tpl')
