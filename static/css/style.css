@@ -1,0 +1,78 @@
+html, body {
+	color: #888;
+	width: 100%;
+	height: 100%;
+	font-family: Arial;
+	margin: 0;
+	padding: 0;
+}
+
+/* General layout of the screen */
+#screen {
+	width: 100%;
+	height: 100%;
+	float: left;
+	overflow: hidden;
+	background-color: #222;
+}
+
+#screen > div {
+	text-align: center;
+	height: 100%;
+}
+
+#screen > div > div {
+	padding: 5px;
+	background-color: #333;
+}
+
+#screen > div > div + div {
+	margin-top: 10px;
+}
+
+/* Left pane */
+#left {
+	float: left;
+	width: 150px;
+	margin-right: 10px;
+}
+
+/* Main pane */
+#main {
+	overflow: hidden;
+	
+	height: 100%;
+	position: relative;
+}
+
+#main > div:nth-child(1) {
+	position: absolute;
+	width: 100%;
+	top: 0px;
+	bottom: 70px;
+}
+
+#main > div:nth-child(2) {
+	position: absolute;
+	width: 100%;
+	bottom: 0px;
+	height: 50px;
+}
+
+/* Right pane */
+#right {
+	float: right;
+	width: 150px;
+	margin-left: 10px;
+}
+
+/* Rules for small screens */
+@media all and (max-width: 800px) {
+	#left {
+		display: none;
+	}
+	
+	#right {
+		display: none;
+	}
+}
