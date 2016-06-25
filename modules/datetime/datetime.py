@@ -4,7 +4,7 @@
 
 from bottle import template
 
-from modules.module import Module, clickable
+from modules.module import Module
 
 class DateTime(Module):
     '''Class representing a module that shows current date and time.'''
