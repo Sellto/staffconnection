@@ -5,8 +5,6 @@
 from abc import *
 import copy
 
-
-
 class Module(metaclass=ABCMeta):
     '''Abstract class representing a generic module.'''
     def __init__(self, name, refreshrate=None, options=None):
@@ -37,7 +35,6 @@ class Module(metaclass=ABCMeta):
 
     @abstractmethod
     def widget(self):
-        def render():
         '''Return a function that renders the widget view of the module
 
         Pre: -
